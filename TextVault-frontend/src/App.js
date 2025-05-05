@@ -29,7 +29,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post('http://localhost:8080/api/posts', {
+      const res = await axios.post('https://textvault-backend.onrender.com/api/posts', {
         text,
         password,
       });
@@ -57,7 +57,7 @@ function App() {
 
   const handleGet = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/posts');
+      const res = await axios.get('https://textvault-backend.onrender.com/api/posts');
       setPosts(res.data);
       setDataFetched(true);
       toast.info("📋 Posts fetched successfully");
@@ -68,7 +68,7 @@ function App() {
 
   const confirmDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/posts/${id}`);
+      await axios.delete(`https://textvault-backend.onrender.com/api/posts/${id}`);
       setPosts(prev => prev.filter(p => p._id !== id));
       toast.success("✅ Post deleted successfully");
     } catch (err) {
