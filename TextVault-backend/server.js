@@ -8,7 +8,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000' })); // Replace with frontend URL
+app.use(cors({ origin: 'https://adeshmishra-textvault.onrender.com' })); // Replace with frontend URL
 app.use(express.json());
 
 // Routes
