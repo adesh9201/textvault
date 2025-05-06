@@ -29,7 +29,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post('https://textvault-backend.onrender.com/api/posts', {
+      await axios.post('https://textvault-backend.onrender.com/api/posts', {
         text,
         password,
       });
