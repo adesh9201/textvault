@@ -1,4 +1,4 @@
-🚀 Build a Secure Text Sharing App Using MERN Stack — TextVault 🛡️
+<h1>🚀 Build a Secure Text Sharing App Using MERN Stack — TextVault 🛡️</h1>
 
 
 
