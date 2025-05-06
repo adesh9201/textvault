@@ -12,6 +12,9 @@ function App() {
   const [deleteTargetId, setDeleteTargetId] = useState(null);
   const [dataFetched, setDataFetched] = useState(false);
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+const POSTS_ENDPOINT = process.env.REACT_APP_POSTS_ENDPOINT;
+
   // Removed the useEffect hook that was automatically fetching posts
 
   const handlePost = () => {
@@ -29,7 +32,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post('https://textvault-backend.onrender.com/api/posts', {
+      await axios.post(`${BASE_URL}${POSTS_ENDPOINT}`, {
         text,
         password,
       });
@@ -57,7 +60,7 @@ function App() {
 
   const handleGet = async () => {
     try {
-      const res = await axios.get('https://textvault-backend.onrender.com/api/posts');
+      const res = await axios.get(`${BASE_URL}${POSTS_ENDPOINT}`);
       setPosts(res.data);
       setDataFetched(true);
       toast.info("📋 Posts fetched successfully");
@@ -68,7 +71,7 @@ function App() {
 
   const confirmDelete = async (id) => {
     try {
-      await axios.delete(`https://textvault-backend.onrender.com/api/posts/${id}`);
+      await axios.delete(`${BASE_URL}${POSTS_ENDPOINT}/${id}`);
       setPosts(prev => prev.filter(p => p._id !== id));
       toast.success("✅ Post deleted successfully");
     } catch (err) {
