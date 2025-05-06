@@ -1,7 +1,7 @@
 # 🚀 TextVault — Secure Text Sharing App Using MERN Stack 🛡️
 
 
-![TextVault Banner](https://github.com/adesh9201/textvault/blob/main/TextVault-frontend/public/favicon.ico)
+![TextVault Banner](https://github.com/adesh9201/textvault/blob/main/TextVault-frontend/public/text%20vault.png)
 
 ## A secure, minimalist text-sharing platform built with the MERN stack
 
